@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "CLI tool to convert openapi 3.0 into typescript client",
   "main": "index.js",
-  "scripts": {
-    "publish": "npm publish"
-  },
   "bin": {
     "openapi-to-ts-client": "./index.js",
     "@sodeprecated/openapi-to-ts-client": "./index.js"
