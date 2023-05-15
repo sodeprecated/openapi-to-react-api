@@ -1,22 +1,22 @@
 {
-  "name": "openapi-to-react-api",
+  "name": "openapi-to-ts-client",
   "version": "0.0.1",
-  "description": "CLI tool to convert openapi 3.0 into react api controllers",
+  "description": "CLI tool to convert openapi 3.0 into typescript client",
   "main": "index.js",
   "scripts": {
     "publish": "npm publish"
   },
   "bin": {
-    "openapi-to-react-api": "./index.js",
-    "@sodeprecated/openapi-to-react-api": "./index.js"
+    "openapi-to-ts-client": "./index.js",
+    "@sodeprecated/openapi-to-ts-client": "./index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sodeprecated/openapi-to-react-api.git"
+    "url": "git+https://github.com/sodeprecated/openapi-to-ts-client.git"
   },
   "keywords": [
     "openapi",
-    "react",
+    "typescript",
     "api",
     "generator",
     "fetch"
@@ -24,9 +24,9 @@
   "author": "Daniil Zhdanovich (@sodeprecated)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sodeprecated/openapi-to-react-api/issues"
+    "url": "https://github.com/sodeprecated/openapi-to-ts-client/issues"
   },
-  "homepage": "https://github.com/sodeprecated/openapi-to-react-api#readme",
+  "homepage": "https://github.com/sodeprecated/openapi-to-ts-client#readme",
   "dependencies": {
     "boxen": "^5.1.2",
     "chalk": "^4.1.2",

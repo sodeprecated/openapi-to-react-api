@@ -10,8 +10,8 @@ const boxen = require("boxen");
 const { genData, genMethods } = require("./gen_core");
 
 const usage = chalk.keyword("violet")(
-  "\nUsage: openapi-to-react-api [input] [options]\n" +
-    boxen(chalk.green("Convert OpenAPI definition to React API"), {
+  "\nUsage: openapi-to-ts-client [input] [options]\n" +
+    boxen(chalk.green("Convert OpenAPI definition to typescript client"), {
       padding: 1,
       borderColor: "green",
       dimBorder: true,

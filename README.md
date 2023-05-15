@@ -1,25 +1,25 @@
-# openapi-to-react-api
-CLI tool to convert openapi 3.0 into react api controllers
+# openapi-to-ts-client
+CLI tool to convert openapi 3.0 into typescript client
 
 ## Installation
 
 ```bash
-npm install -g openapi-to-react-api
+npm install -g openapi-to-ts-client
 ```
 
 ## Usage
 
 ```bash
-openapi-to-react-api --help
+openapi-to-ts-client --help
 ```
 
 ```
-Usage: openapi-to-react-api [input] [options]
-┌─────────────────────────────────────────────┐
-│                                             │
-│   Convert OpenAPI definition to React API   │
-│                                             │
-└─────────────────────────────────────────────┘
+Usage: openapi-to-ts-client [input] [options]
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│   Convert OpenAPI definition to typescript client   │
+│                                                     │
+└─────────────────────────────────────────────────────┘
 
 
 Options:
@@ -33,7 +33,7 @@ Options:
 ## Example
 
 ```bash
-openapi-to-react-api ./openapi.json -o ./src/api
+openapi-to-ts-client ./openapi.json -o ./src/api
 ```
 
 ## Dependencies
