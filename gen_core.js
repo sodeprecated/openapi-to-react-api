@@ -1,7 +1,7 @@
 const { compile } = require("./json-schema-to-typescript");
 const { generateApiMethod } = require("./method_generator");
 
-module.exports.genMethods = (oa, contractsFilename, fetchWrapperFilename) => {
+module.exports.genMethods = (oa, contractsFilename, fetchWrapperFilename, baseUrlName) => {
   const methods = Object.entries(oa.paths)
     .map(([pathKey, pathProps]) =>
       Object.entries(pathProps).map(([opKey, opProps]) => {
@@ -38,13 +38,13 @@ module.exports.genMethods = (oa, contractsFilename, fetchWrapperFilename) => {
   const methodsStr = [...controllersMap]
     .map(([controllerName, ops]) => {
       return `\n${controllerName}: {\n${ops
-        .map((x) => generateApiMethod(x))
+        .map((x) => generateApiMethod(x, baseUrlName))
         .join(",\n")}\n},`;
     })
     .join("\n");
 
   const apiClassStr = `
-  import { API_BASE_URL } from './constants';
+  import { ${baseUrlName} } from './constants';
 	import {
 		${Object.keys(oa.components.schemas)
       .filter((x) => new RegExp(`\\W${x}\\W`, "g").test(methodsStr))

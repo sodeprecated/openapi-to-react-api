@@ -39,6 +39,12 @@ const options = yargs
     default: "data_contracts.ts",
     type: "string",
   })
+  .options("burl", {
+    alias: "b",
+    describe: "Base URL name",
+    default: "API_BASE_URL",
+    type: "string",
+  })
   .options("fetch", {
     alias: "f",
     describe: "Fetch wrapper filename",
@@ -62,7 +68,8 @@ if (!input) {
     swaggerDocument,
     // Strip the extension from the input file
     options.argv.contracts.replace(/\.[^/.]+$/, ""),
-    options.argv.fetch.replace(/\.[^/.]+$/, "")
+    options.argv.fetch.replace(/\.[^/.]+$/, ""),
+    options.argv.burl
   );
   const gData = genData(swaggerDocument);
 

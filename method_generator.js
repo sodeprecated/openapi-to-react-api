@@ -161,7 +161,7 @@ function genRequest(op) {
 }
 
 module.exports = {
-  generateApiMethod(op) {
+  generateApiMethod(op, baseUrlName) {
     const dataType = genResponseType(op, 200);
     const paramsInQuery = op.params
       ? op.params.filter((x) => x.in === "query")
@@ -188,7 +188,7 @@ module.exports = {
       }
 			return fetchWrapper.send${
         dataType ? `<${dataType}>` : ""
-      }(\`\${API_BASE_URL}${op.url.replace(/{/g, "${")}\`, ${genRequest(op)}${
+      }(\`\${${baseUrlName}}${op.url.replace(/{/g, "${")}\`, ${genRequest(op)}${
       paramsInQuery.length ? ", query" : ""
     });
 		}

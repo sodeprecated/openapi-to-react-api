@@ -27,6 +27,7 @@ Options:
   -o, --output     Output directory                     [string] [default: "./"]
   -c, --client     Client filename           [string] [default: "api_client.ts"]
   -t, --contracts  Contracts filename    [string] [default: "data_contracts.ts"]
+  -b, --burl       Base URL name              [string] [default: "API_BASE_URL"]
   -f, --fetch      Fetch wrapper filename [string] [default: "fetch_wrapper.ts"]
       --help       Show help                                           [boolean]
 ```
