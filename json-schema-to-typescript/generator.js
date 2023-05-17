@@ -381,7 +381,7 @@ function escapeKeyName(keyName) {
   ) {
     return keyName;
   }
-  if (keyName === "[k]") {
+  if (keyName === "[k: string]") {
     return keyName;
   }
   return JSON.stringify(keyName);
