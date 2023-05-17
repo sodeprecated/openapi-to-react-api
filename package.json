@@ -1,6 +1,6 @@
 {
   "name": "openapi-to-ts-client",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "CLI tool to convert openapi 3.0 into typescript client",
   "main": "index.js",
   "bin": {
