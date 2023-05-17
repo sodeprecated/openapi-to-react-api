@@ -83,7 +83,7 @@ module.exports.traverse = (schema, callback, processed = new Set(), key) => {
     schema.additionalProperties &&
     typeof schema.additionalProperties === "object"
   ) {
-    traverse(schema.additionalProperties, callback, processed);
+    module.exports.traverse(schema.additionalProperties, callback, processed);
   }
   if (schema.items) {
     const { items } = schema;
